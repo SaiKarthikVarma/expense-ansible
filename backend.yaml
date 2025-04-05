@@ -43,9 +43,8 @@
 
     - name: copy backend service
       ansible.builtin.copy:
-        src: backend.serice
+        src: backend.service
         dest: /etc/systemd/system/backend.service
-        remote_src: yes
 
     - name: import mysql data
       community.mysql.mysql_db:
