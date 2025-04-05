@@ -1,7 +1,7 @@
 - name: mysql configuration
   hosts: mysql
   become: yes
-  vars: 
+  vars:
     mysql_root_password: ExpenseApp@1
     login_host: mysql.daws81s.com
   tasks:
@@ -20,6 +20,7 @@
         login_user: root
         login_password: "{{mysql_root_password}}"
         login_host: "{{login_host}}"
+      ignore_error: true
       register: mysql_info
 
     - name: print mysql info
