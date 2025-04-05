@@ -5,10 +5,11 @@
     mysql_root_password: ExpenseApp@1
     login_host: mysql.daws81.com
   tasks:
-    - name: install PyMySQL
+    - name: install PyMySQL and cryptography
       ansible.builtin.pip:
         name:
           - PyMySQL
+          - cryptography
         executable: pip3.9
 
     - name: disable default nodejs
